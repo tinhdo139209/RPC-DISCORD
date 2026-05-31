@@ -1,0 +1,57 @@
+{
+  "name": "neon-vscord",
+  "displayName": "NEON VSCord",
+  "description": "Real-time editor bridge for NEON RPC v2",
+  "version": "2.0.0",
+  "publisher": "neon-rpc",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "neonVscord.reconnect",
+        "title": "NEON RPC: Reconnect Bridge"
+      },
+      {
+        "command": "neonVscord.toggle",
+        "title": "NEON RPC: Toggle Presence"
+      }
+    ],
+    "configuration": {
+      "title": "NEON VSCord",
+      "properties": {
+        "neonVscord.port": {
+          "type": "number",
+          "default": 7878,
+          "description": "WebSocket bridge port (must match config.json)"
+        },
+        "neonVscord.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable NEON RPC bridge"
+        },
+        "neonVscord.updateInterval": {
+          "type": "number",
+          "default": 2000,
+          "description": "State update interval in milliseconds"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch":   "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node":   "^20.0.0",
+    "@types/ws":     "^8.5.0",
+    "typescript":    "^5.3.0"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}

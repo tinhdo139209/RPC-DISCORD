@@ -1,0 +1,26 @@
+{
+  "client_id": "1464845688142565406",
+  "scan_interval": 3,
+  "update_throttle": 5,
+  "reconnect_delay": 10,
+  "heartbeat_interval": 30,
+  "small_image": "online",
+  "small_text": "🟢 Online",
+  "bridge_port": 7878,
+  "default_rpc": {
+    "details": "💻 Coding by Roshi",
+    "state": "🧋 Đang Uống Bạc Xỉu 🧋",
+    "image": "rpc_logo",
+    "large_text": "⚡ NEON RPC v2"
+  },
+  "plugins": {
+    "fivem":   { "priority": 1, "enabled": true },
+    "blender": { "priority": 2, "enabled": true },
+    "vscode":  { "priority": 3, "enabled": true },
+    "idle":    { "priority": 99, "enabled": true }
+  },
+  "privacy": {
+    "hide_full_path": true,
+    "show_workspace_only": true
+  }
+}
